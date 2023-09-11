@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.btn-custom {
+    font-family: "Space Grotesk", sans-serif;
+    margin: 10px;
+    border: 8px solid #333333;
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: none;
+    color: #eeeeee;
+    background-color: #333333;
+}
+
+.btn-custom:hover {
+    border: 8px solid #855235;
+    background-color: #855235;
+    color: white;
+
+}
