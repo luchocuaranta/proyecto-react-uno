@@ -27,7 +27,6 @@ const NavBar = () => {
                         </a>
                     </li>
                 </ul>
-                {CartWidget}
                 <div className="nav-item m-lg-auto">
                     <CartWidget/>
                 </div>
