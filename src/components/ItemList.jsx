@@ -1,5 +1,5 @@
 import React from "react";
-import ItemDetail from "./ItemDetail";
+import Items from "./Items";
 
 
 const ItemList = ({ products }) => {
@@ -8,7 +8,7 @@ const ItemList = ({ products }) => {
             <div className="row">
                 {products.map((product) => (
                     <div className="col-md-4 mb-4" key={product.id}>
-                        <ItemDetail products={products} />
+                        <Items products={products} />
                     </div>
                 ))}
             </div>

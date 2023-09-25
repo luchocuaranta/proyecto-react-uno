@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from "react"; 
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
     const [products, setProducts] = useState([]);
@@ -16,8 +16,9 @@ const ItemDetailContainer = () => {
     }, []);
 
     return (
-        <div className="container mt-4">
-            <ItemList products={products} />
+        <div className="container mt-4 text-center">
+            <h2 className='p-2'>Detalle</h2>
+            <ItemDetail products={products} />
         </div>
     );
 };
