@@ -22,3 +22,12 @@
 
 }
 
+.card{
+    font-family: "Space Grotesk", sans-serif;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.1s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}

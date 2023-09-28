@@ -5,6 +5,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -12,7 +13,7 @@ function App() {
       <div>
         <NavBar />
         <ItemListContainer greeting="Bienvenidos a Error Clothing!" />
-        <ItemDetailContainer/>
+        <ItemDetailContainer productIds={2}/>
       </div>
     </div>
   );

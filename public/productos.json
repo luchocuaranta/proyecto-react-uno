@@ -13,11 +13,28 @@
         "descripcion": "Buzo negro Oversize System", 
         "img": "./clothes-escalera-redu.jpg"
     },
-    { 
+    {
         "id": 3, 
+        "nombre": "Hoodie Classic", 
+        "precio": 13000, 
+        "descripcion": "Buzo gris oversize Classic", 
+        "img": "./foto-mateo-fondo.jpg"
+        
+    },
+    {
+        "id": 4, 
+        "nombre": "Remera Blonde", 
+        "precio": 11000, 
+        "descripcion": "Remera negra Blonde Oversize Classic", 
+        "img": "./clothes-reme-blonde-redu.jpg"
+        
+    },
+    { 
+        "id": 6, 
         "nombre": "Remera Classic", 
         "precio": 10000, 
         "descripcion": "Remera negra Oversize Classic", 
         "img": "./clothes-reme-classic-redu.jpg"
     }
+    
 ]

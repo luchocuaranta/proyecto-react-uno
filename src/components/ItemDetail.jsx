@@ -1,19 +1,20 @@
 import React from "react";
-import Items from "./Items";
 
-
-const ItemDetail = ({ products }) => {
-    return (
-        <div className="container">
-            <div className="row">
-                {products.map((product) => (
-                    <div className="col-md-4 mb-4" key={product.id}>
-                        <Items products={products} />
-                    </div>
-                ))}
+const ItemDetail = (product) => {
+    return(
+        <div className="card mb-3">
+            <div className="card-body ">
+                <img src={product.img} className="card-img-top" alt='hola' />
+                <h2 className="card-title m-2">{product.nombre}</h2>
+                <p className="card-text">{product.descripcion}</p>
+                <p id={product.id}></p>               
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default ItemDetail;
+
+
+
+
