@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/navegacion/NavBar";
 import ItemListContainer from "./components/pages/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
@@ -10,12 +11,20 @@ function App() {
   return (
     <div className="App">
 
-      <div>
-        <NavBar />
-        <ItemListContainer greeting="Bienvenidos a Error Clothing!" />
-        <ItemDetailContainer productIds={2}/>
-      </div>
-    </div>
+      <BrowserRouter>
+
+      <NavBar />
+
+      <Routes>
+        <Route path="/" element={<ItemListContainer greeting="Bienvenidos a Error Clothing!"/>} />
+
+        <Route path="/item/:productId" element={<ItemDetailContainer />}/>
+
+      </Routes>
+
+      </BrowserRouter>
+
+    </div >
   );
 }
 

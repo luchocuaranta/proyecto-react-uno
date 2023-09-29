@@ -1,5 +1,6 @@
 import React from "react";
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
 
 const Items = ({ product }) => {
     return (
@@ -9,8 +10,8 @@ const Items = ({ product }) => {
                     <img src={product.img} className="card-img-top" alt='hola' />
                     <h2 className="card-title m-2">{product.nombre}</h2>
                     <p>${product.precio}</p>
-                    <a className="card-text" href={`/item/${product.id}`}>Ver detalle</a>
-                    <ItemCount stock={4} inicial={1} onAdd={(count) => console.log(`Se agregaron ${count} items al carrito`)} />
+                    <Link className="card-text" to={`/item/${product.id}`}>Ver detalle</Link>
+                    <ItemCount stock={4} inicial={1} onAdd={(count) => console.log(`Se agrego ${count} items al carrito`)} />
                 </div>
             </div>
         </div>

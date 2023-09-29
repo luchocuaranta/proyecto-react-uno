@@ -5,6 +5,7 @@
         "precio": 13000, 
         "descripcion": "Buzo negro Oversize Classic", 
         "img": "./clothes-chica-redu.jpg"
+        
     },
     { 
         "id": 2, 
