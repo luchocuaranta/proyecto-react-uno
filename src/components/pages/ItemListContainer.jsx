@@ -1,22 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import "../style.css";
 import ItemList from '../ItemList';
+import { useParams } from 'react-router-dom';
 
 
 const ItemListContainer = ({ greeting }) => {
 
     const [products, setProducts] = useState([])
+    const category = useParams().category
 
     useEffect(() => {
-        setTimeout(() => {
-            fetch('/productos.json') 
-                .then((response) => response.json())
-                .then((data) => {
+
+        fetch('/productos.json')
+            .then((response) => response.json())
+            .then((data) => {
+                if (category) {
+                    setProducts(data.filter((products) => products.category === category))
+                } else {
                     setProducts(data);
-                })
-                .catch((error) => console.error("Error al cargar los productos", error));
-        }, 2000);
-    }, [])
+                }
+
+            })
+            .catch((error) => console.error("Error al cargar los productos", error));
+
+    }, [category])
 
 
 
