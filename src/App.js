@@ -1,29 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/navegacion/NavBar";
 import ItemListContainer from "./components/pages/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
+import { CartContext } from "./context/CartContext";
 
 
 
 
 function App() {
+
+  const [carrito, setCarrito] = useState([]);
+
   return (
     <div className="App">
+      
 
-      <BrowserRouter>
+      <CartContext.Provider value={ {carrito, setCarrito} }>
 
-      <NavBar />
+        <BrowserRouter>
 
-      <Routes>
-        <Route path="/" element={<ItemListContainer greeting="Bienvenidos a Error Clothing!"/>} />
-        <Route path="/category/:category" element={<ItemListContainer />}/>
-        <Route path="/item/:productId" element={<ItemDetailContainer />}/>
-        
+          <NavBar />
 
-      </Routes>
+          <Routes>
+            <Route path="/" element={<ItemListContainer greeting="Bienvenidos a Error Clothing!" />} />
+            <Route path="/category/:category" element={<ItemListContainer />} />
+            <Route path="/item/:productId" element={<ItemDetailContainer />} />
 
-      </BrowserRouter>
+
+          </Routes>
+
+        </BrowserRouter>
+      </CartContext.Provider>
+
+      
 
     </div >
   );

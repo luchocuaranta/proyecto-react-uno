@@ -5,7 +5,8 @@
         "precio": 13000, 
         "descripcion": "Buzo negro Oversize Classic", 
         "img": "/clothes-chica-redu.jpg",
-        "category": "buzos"
+        "category": "buzos",
+        "stock": 5
     },
     { 
         "id": 2, 
@@ -13,7 +14,8 @@
         "precio": 16000, 
         "descripcion": "Buzo negro Oversize System", 
         "img": "/clothes-escalera-redu.jpg",
-        "category": "buzos"
+        "category": "buzos",
+        "stock": 5
     },
     {
         "id": 3, 
@@ -21,7 +23,8 @@
         "precio": 13000, 
         "descripcion": "Buzo gris oversize Classic", 
         "img": "/foto-mateo-fondo.jpg",
-        "category": "buzos"
+        "category": "buzos",
+        "stock": 5
     },
     {
         "id": 4, 
@@ -29,8 +32,8 @@
         "precio": 11000, 
         "descripcion": "Remera negra Blonde Oversize Classic", 
         "img": "/clothes-reme-blonde-redu.jpg",
-        "category": "remeras"
-        
+        "category": "remeras",
+        "stock": 5
     },
     { 
         "id": 6, 
@@ -38,7 +41,8 @@
         "precio": 10000, 
         "descripcion": "Remera negra Oversize Classic", 
         "img": "/clothes-reme-classic-redu.jpg",
-        "category": "remeras"
+        "category": "remeras",
+        "stock": 5
     }
     
 ]
