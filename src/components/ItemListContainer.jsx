@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import "../style.css";
-import ItemList from '../ItemList';
+import "./style.css";
+import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
+import { collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from '../firebase/config';
+
 
 
 const ItemListContainer = ({ greeting }) => {
 
     const [products, setProducts] = useState([])
-    const category = useParams().category
+    const category = useParams().category;
 
     useEffect(() => {
 
-        fetch('/productos.json')
-            .then((response) => response.json())
-            .then((data) => {
-                if (category) {
-                    setProducts(data.filter((products) => products.category === category))
-                } else {
-                    setProducts(data);
-                }
-
+        const productosRef = collection(db, "productos");
+        const q = category ? query(productosRef, where("category", "==", category)) : productosRef;
+        getDocs(q)
+            .then((resp) => {
+                setProducts(
+                    resp.docs.map((doc) =>{
+                        return {...doc.data(), id: doc.id}
+                    })
+                )
             })
-            .catch((error) => console.error("Error al cargar los productos", error));
 
     }, [category])
 

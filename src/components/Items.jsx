@@ -1,21 +1,8 @@
-import React, { useState } from "react";
-import ItemCount from "./ItemCount";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Items = ({ product }) => {
-    const [cantidad, setCantidad] = useState(1);
-
-    const handleRestar = () => {
-        cantidad > 1 && setCantidad(cantidad - 1)
-    }
-
-    const handleSumar = () => {
-        cantidad < product.stock && setCantidad(cantidad + 1)
-    }
-
-    const handleAgregar = () => {
-        console.log({...product, cantidad})
-    }
+    
     return (
         <div>
             <div className="card mb-3 ">
@@ -23,13 +10,8 @@ const Items = ({ product }) => {
                     <img src={product.img} className="card-img-top" alt='hola' />
                     <h2 className="card-title m-2">{product.nombre}</h2>
                     <p>${product.precio}</p>
-                    <Link className='btn btn-outline-dark btn-sm' to={`/item/${product.id}`}>Ver detalle</Link>
-                    <ItemCount 
-                            cantidad={cantidad}
-                            handleSumar={handleSumar}
-                            handleRestar={handleRestar}
-                            handleAgregar={handleAgregar}
-                    />
+                    <Link className='btn btn-outline-dark btn-sm mb-3' to={`/item/${product.id}`}>Ver detalle</Link>
+                    
                 </div>
             </div>
         </div>

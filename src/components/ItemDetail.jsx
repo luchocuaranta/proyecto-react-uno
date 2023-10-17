@@ -3,10 +3,9 @@ import ItemCount from "./ItemCount";
 import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({ product }) => {
-    
-    const { carrito, setCarrito } = useContext(CartContext);
+    const {carrito, agregarCarrito} = useContext(CartContext)
 
-    // console.log(carrito);
+    console.log(carrito);
 
     const [cantidad, setCantidad] = useState(1);
 
@@ -18,10 +17,7 @@ const ItemDetail = ({ product }) => {
         cantidad < product.stock && setCantidad(cantidad + 1)
     }
 
-    const handleAgregar = () => {
-        const itemAgregado = {...product, cantidad}
-        console.log(itemAgregado)
-    }
+    
 
 
     return (
@@ -40,7 +36,7 @@ const ItemDetail = ({ product }) => {
                             cantidad={cantidad}
                             handleSumar={handleSumar}
                             handleRestar={handleRestar}
-                            handleAgregar={handleAgregar}
+                            handleAgregar={() => {agregarCarrito(product, cantidad )}}
                         />
                     </div>
                 </div>
