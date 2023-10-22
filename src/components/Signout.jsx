@@ -40,15 +40,15 @@ const Signout = () => {
 
     return (
 
-        <div className="container">
-            <h1>Ingresa tus datos para Finalizar Compra</h1>
-            <form onSubmit={handleSubmit(enviar)}>
+        <div className="container d-flex flex-column align-items-center">
+            <h2>Ingresa tus datos para Finalizar Compra</h2>
+            <form onSubmit={handleSubmit(enviar)} className='formulario gap-4 mt-4'>
     
                 <input type="text" placeholder="Ingresá tu nombre" {...register("nombre")} />
                 <input type="email" placeholder="Ingresá tu e-mail" {...register("email")} />
                 <input type="phone" placeholder="Ingresá tu teléfono" {...register("telefono")} />
     
-                <button className="enviar" type="submit">Enviar</button>
+                <button className="btn-custom" type="submit">Enviar</button>
     
             </form>
         </div>

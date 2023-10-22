@@ -8,8 +8,11 @@ const CartWidget = () => {
 
     return (
         
-        <div className="cart-widget">
-            <Link to="/carrito"><i className="fas fa-shopping-cart"></i><span> {carritoCantidad()}</span></Link>
+        <div>
+            <Link className='menu' to="/carrito">
+                <i className="fas fa-shopping-cart"></i>
+                <span> {carritoCantidad()}</span>
+            </Link>
             
         </div>
 

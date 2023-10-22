@@ -31,3 +31,30 @@
     transform: scale(1.05);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: flex-start;
+}
+
+.formulario input {
+    padding: .5rem;
+    width: 18rem;
+    border-radius: .5rem;
+    border: 2px solid black;
+}
+
+
+.menu{
+    font-family: "Space Grotesk", sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.menu:hover{
+    text-decoration: underline;
+
+}

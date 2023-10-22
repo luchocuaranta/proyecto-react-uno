@@ -14,13 +14,13 @@ const NavBar = () => {
                 <div className="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/">Items</Link>
+                            <Link className="nav-link active menu" aria-current="page" to="/">Items</Link>
                         </li>              
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="category/remeras">Remeras</Link>
+                            <Link className="nav-link active menu" aria-current="page" to="category/remeras">Remeras</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="category/buzos">Buzos</Link>
+                            <Link className="nav-link active menu" aria-current="page" to="category/buzos">Buzos</Link>
                         </li>
                         <li className="nav-item nav-link">
                             <CartWidget/>   

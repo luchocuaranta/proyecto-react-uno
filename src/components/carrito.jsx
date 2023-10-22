@@ -13,11 +13,11 @@ const Carrito = () => {
 
     return (
 
-        <div className="container">
-            <h1>Carrito</h1>
+        <div className="container d-flex flex-column column-gap-5">
+            <h1 className="d-flex justify-content-center mt-3 mb-3">Carrito</h1>
             {
                 carrito.map((product) => (
-                    <div key={product.id}>
+                    <div key={product.id} className="column-gap-4">
                         <h2>{product.nombre}</h2>
                         <p>Precio por unidad: ${product.precio}</p>
                         <p>Cantidad: {product.cantidad}</p>
@@ -32,8 +32,8 @@ const Carrito = () => {
                 carrito.length > 0 ?
                     <>
                         <h2>Precio total: ${precioTotal()}</h2>
-                        <button onClick={handleVaciar}>Vaciar</button>
-                        <Link to="/signout">Finalizar Compra</Link>
+                        <button onClick={handleVaciar} className="btn-custom btn btn-secondary btn-sm">VACIAR CARRITO</button>
+                        <Link to="/signout" className="btn-custom btn btn-secondary btn-sm">FINALIZAR COMPRA</Link>
                     </> :
                     <h2>El carrito está vacío </h2>
 
